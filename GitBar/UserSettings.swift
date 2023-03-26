@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+class UserSettings: ObservableObject {
+    @Published var username: String = "guppy57"
+    @Published var timeline: String = "Today"
+    @Published var launchAtLogin: Bool = true
+}
