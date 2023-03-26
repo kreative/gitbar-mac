@@ -8,20 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var title: String = "me"
+    
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Your Stats")
-                .font(.headline)
+            Text("Your Contributions").font(.subheadline)
             Text("21 Today")
             Divider()
-            Button(action: {
-                NSApplication.shared.terminate(self)
-            }) {
-                Text("Quit")
-            }
             Spacer()
         }
         .padding()
+        
+        SettingsView().frame(maxWidth: .infinity)
     }
 }
 
