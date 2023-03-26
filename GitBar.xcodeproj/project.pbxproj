@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B230A4D729D01AF50082A435 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B230A4D629D01AF50082A435 /* MenuView.swift */; };
 		B25C487E29CFB6F40023205F /* GitBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C487D29CFB6F40023205F /* GitBarApp.swift */; };
 		B25C488229CFB6F60023205F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B25C488129CFB6F60023205F /* Assets.xcassets */; };
 		B25C488529CFB6F60023205F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B25C488429CFB6F60023205F /* Preview Assets.xcassets */; };
@@ -14,12 +15,12 @@
 		B25C488F29CFBA880023205F /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C488E29CFBA880023205F /* WebService.swift */; };
 		B25C489229CFBC880023205F /* TimelineType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C489129CFBC880023205F /* TimelineType.swift */; };
 		B25C489629CFC4E70023205F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C489529CFC4E70023205F /* ContentView.swift */; };
-		B25C489829CFCDAF0023205F /* ApplicationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C489729CFCDAF0023205F /* ApplicationMenu.swift */; };
 		B25C489A29CFD2690023205F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B25C489929CFD2690023205F /* Credits.rtf */; };
 		B25C489C29CFDA620023205F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C489B29CFDA620023205F /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B230A4D629D01AF50082A435 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		B25C487A29CFB6F40023205F /* GitBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B25C487D29CFB6F40023205F /* GitBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitBarApp.swift; sourceTree = "<group>"; };
 		B25C488129CFB6F60023205F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -29,7 +30,6 @@
 		B25C488E29CFBA880023205F /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		B25C489129CFBC880023205F /* TimelineType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineType.swift; sourceTree = "<group>"; };
 		B25C489529CFC4E70023205F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		B25C489729CFCDAF0023205F /* ApplicationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationMenu.swift; sourceTree = "<group>"; };
 		B25C489929CFD2690023205F /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		B25C489B29CFDA620023205F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,9 +72,9 @@
 				B25C488329CFB6F60023205F /* Preview Content */,
 				B25C489029CFBC7B0023205F /* Types */,
 				B25C489529CFC4E70023205F /* ContentView.swift */,
-				B25C489729CFCDAF0023205F /* ApplicationMenu.swift */,
 				B25C489929CFD2690023205F /* Credits.rtf */,
 				B25C489B29CFDA620023205F /* SettingsView.swift */,
+				B230A4D629D01AF50082A435 /* MenuView.swift */,
 			);
 			path = GitBar;
 			sourceTree = "<group>";
@@ -167,8 +167,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B25C489C29CFDA620023205F /* SettingsView.swift in Sources */,
+				B230A4D729D01AF50082A435 /* MenuView.swift in Sources */,
 				B25C487E29CFB6F40023205F /* GitBarApp.swift in Sources */,
-				B25C489829CFCDAF0023205F /* ApplicationMenu.swift in Sources */,
 				B25C489629CFC4E70023205F /* ContentView.swift in Sources */,
 				B25C489229CFBC880023205F /* TimelineType.swift in Sources */,
 				B25C488F29CFBA880023205F /* WebService.swift in Sources */,
