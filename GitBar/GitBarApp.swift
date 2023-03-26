@@ -9,8 +9,7 @@ import SwiftUI
 
 @main
 struct GitBarApp: App {
-    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         Settings {
             EmptyView()
@@ -19,13 +18,27 @@ struct GitBarApp: App {
 }
 
 class AppDelegate: NSObject, NSApplicationDelegate {
-    static private(set) var instance: AppDelegate!
-    lazy var statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-    let menu = ApplicationMenu()
-    
+    var statusItem: NSStatusItem?
+    var popOver = NSPopover()
+
     func applicationDidFinishLaunching(_ notification: Notification) {
-        AppDelegate.instance = self
-        statusBarItem.button?.title = "GitBar"
-        statusBarItem.menu = menu.createMenu()
+        let contentView = ContentView()
+        popOver.behavior = .transient
+        popOver.animates = true
+        popOver.contentViewController = NSViewController()
+        popOver.contentViewController?.view = NSHostingView(rootView: contentView)
+
+        statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+
+        if let MenuButton = statusItem?.button{
+            MenuButton.title = "GitBar2"
+            MenuButton.action = #selector(MenuButtonToggle)
+        }
+    }
+    
+    @objc func MenuButtonToggle() {
+        if let menuButton = statusItem?.button{
+            self.popOver.show(relativeTo: menuButton.bounds, of: menuButton, preferredEdge: NSRectEdge.minY)
+        }
     }
 }

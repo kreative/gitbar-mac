@@ -7,19 +7,20 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @State private var title: String = "me"
-    
+struct ContentView: View {    
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("Your Contributions").font(.subheadline)
-            Text("21 Today")
-            Divider()
-            Spacer()
+        VStack {
+            VStack(alignment: .leading) {
+                Text("Your Contributions").font(.subheadline)
+                Text("21 Today")
+                Divider()                
+            }
+            .padding()
+            
+            SettingsView().frame(maxWidth: .infinity)
+            MenuView().frame(maxWidth: .infinity)
         }
-        .padding()
-        
-        SettingsView().frame(maxWidth: .infinity)
+        .frame(width: 225)
     }
 }
 

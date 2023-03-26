@@ -6,3 +6,12 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct Preferences {
+    @AppStorage("username") var username: String = "guppy57"
+    
+    func setUsername(newUsername: String) {
+        UserDefaults.standard.set(newUsername, forKey: "username")
+    }
+}
