@@ -16,6 +16,7 @@
 		B25C489629CFC4E70023205F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C489529CFC4E70023205F /* ContentView.swift */; };
 		B25C489829CFCDAF0023205F /* ApplicationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C489729CFCDAF0023205F /* ApplicationMenu.swift */; };
 		B25C489A29CFD2690023205F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B25C489929CFD2690023205F /* Credits.rtf */; };
+		B25C489C29CFDA620023205F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25C489B29CFDA620023205F /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B25C489529CFC4E70023205F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B25C489729CFCDAF0023205F /* ApplicationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationMenu.swift; sourceTree = "<group>"; };
 		B25C489929CFD2690023205F /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		B25C489B29CFDA620023205F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				B25C489529CFC4E70023205F /* ContentView.swift */,
 				B25C489729CFCDAF0023205F /* ApplicationMenu.swift */,
 				B25C489929CFD2690023205F /* Credits.rtf */,
+				B25C489B29CFDA620023205F /* SettingsView.swift */,
 			);
 			path = GitBar;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B25C489C29CFDA620023205F /* SettingsView.swift in Sources */,
 				B25C487E29CFB6F40023205F /* GitBarApp.swift in Sources */,
 				B25C489829CFCDAF0023205F /* ApplicationMenu.swift in Sources */,
 				B25C489629CFC4E70023205F /* ContentView.swift in Sources */,
