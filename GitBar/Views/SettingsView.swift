@@ -8,38 +8,43 @@
 import SwiftUI
 
 struct SettingsView: View {
-    var timelines = ["Today", "This Week", "This Month", "This Year", "All Time"]
+    var timelines = ["Today", "This Week", "This Month", "This Year",]
     
-    @State private var username = "guppy57"
-    @State private var selectedTimeline = "Today"
-    @State private var showSuffix = true
-    @State private var launchAtLogin = true
+    @EnvironmentObject var settings: UserSettings
     
-    @AppStorage("username") var defaultUsername: String = "u"
+    @State private var newUsername: String = ""
+    @State private var newSelectedTimeline = "Today"
+    @State private var newLaunchAtLogin = true
     
     var body: some View {
         VStack(alignment: .leading) {
             Text("Settings").font(.subheadline).multilineTextAlignment(.leading)
-            TextField("GitHub username", text: $username)
-            Picker("Timeline", selection: $selectedTimeline) {
+            TextField("GitHub username", text: Binding(get: {
+                return newUsername
+            }, set: { newValue in
+                newUsername = newValue
+            }))
+            Button {
+                // set the new username
+                settings.username = newUsername
+                // get the new github account createdAt date
+            } label: {
+                Text("Update username")
+            }
+            Picker("Timeline", selection: $settings.timeline) {
                 ForEach(timelines, id: \.self) {
                     Text($0)
                 }
             }
-            Toggle(isOn: $showSuffix) {
-                Text("Icon and count only")
-            }
-            Toggle(isOn: $launchAtLogin) {
+            Toggle(isOn: $settings.launchAtLogin) {
                 Text("Launch at login")
-            }
-            Button {
-                print("To be saved")
-            } label: {
-                Text("Save settings")
             }
         }
         .frame(maxWidth: .infinity)
         .padding()
+        .onAppear {
+            self.newUsername = settings.username
+        }
     }
 }
 
