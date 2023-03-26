@@ -7,13 +7,18 @@
 
 import SwiftUI
 
-struct ContentView: View {    
+struct ContentView: View {
+    
+    @StateObject var settings = UserSettings()
+    
     var body: some View {
         VStack {
             VStack(alignment: .leading) {
+                Text("Welcome @\(settings.username)").font(.headline).padding(.bottom)
                 Text("Your Contributions").font(.subheadline)
                 Text("21 Today")
-                Divider()                
+                Divider()
+
             }
             .padding()
             
@@ -21,6 +26,7 @@ struct ContentView: View {
             MenuView().frame(maxWidth: .infinity)
         }
         .frame(width: 225)
+        .environmentObject(settings)
     }
 }
 
