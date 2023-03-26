@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ApplicationMenu.swift
 //  GitBar
 //
 //  Created by Armaan Gupta on 3/25/23.
