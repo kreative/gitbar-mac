@@ -18,7 +18,7 @@ struct MenuView: View {
                 NSApp.orderFrontStandardAboutPanel()
             } label: {
                 HStack {
-                    Text("About GitBar")
+                    Text("🤔 About GitBar")
                     Spacer()
                 }
             }
@@ -39,7 +39,7 @@ struct MenuView: View {
                 NSWorkspace.shared.open(url)
             } label: {
                 HStack {
-                    Text("Explore Kreative")
+                    Text("🦄 Explore Kreative")
                     Spacer()
                 }
             }
@@ -60,7 +60,7 @@ struct MenuView: View {
                 NSWorkspace.shared.open(url)
             } label: {
                 HStack {
-                    Text("Rate us")
+                    Text("⭐ Rate us")
                     Spacer()
                 }
             }
@@ -81,7 +81,7 @@ struct MenuView: View {
                 NSWorkspace.shared.open(url)
             } label: {
                 HStack {
-                    Text("GitBar for VSCode")
+                    Text("👀 GitBar for VSCode")
                     Spacer()
                 }
             }
@@ -100,7 +100,7 @@ struct MenuView: View {
                 NSApp.terminate(self)
             } label: {
                 HStack {
-                    Text("Quit GitBar")
+                    Text("❎ Quit GitBar")
                     Spacer()
                 }
             }
